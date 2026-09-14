@@ -20,7 +20,11 @@ int SumOfElements(int A[], int size)
 // Basically, what we understand from this, is that
 // there is no Refernce by value in arrays.
 // When we put an array as a function argument,
-// it is basically the same as int A[] ===== int *A
+
+
+// IT IS BASICALLY THE SAME AS int A[] ===== int *A
+
+
 // That means that the the argument is basically a pointer 
 // which points at the address of the array in the main.
 // This makes perfect sense cause an array can be very big 
