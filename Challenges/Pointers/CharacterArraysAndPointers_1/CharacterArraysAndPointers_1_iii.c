@@ -8,7 +8,7 @@ void print(char *C)
 {
     for (int i = 0; *(C+i) != '\0'; i++)
     {
-        printf("%c" ,*(C+i));
+        printf("%c" ,*(C+i));  // *(C+i) means C[i]
     }   
 }
 
