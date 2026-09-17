@@ -4,22 +4,26 @@
 
 void Func1(int *A) // Argument: 1-D Array of integers
 {
-
+    printf("Func1 output: %d\n", *A);
 }
 
-void Func2(int (*A)[3]) // Argument: 2-D Array of integers
+void Func2(int (*B)[3]) // Argument: 2-D Array of integers
 {
-
+    printf("Func2 output: %d\n", **B);
 }
 
-void Func3(int (*A)[2][2]) // Argument: 3-D Array of integers
+void Func3(int (*C)[2][2]) // Argument: 3-D Array of integers
 {
-
+    printf("Func3 output: %d\n", ***C);
 }
 
 
 int main()
 {
+
+    int A[2] = {1,2};
+    int B[2][3] = {{2,4,6},{5,7,8}};
+
     int C[3][2][2] = 
     {
         {
@@ -38,15 +42,13 @@ int main()
     }; 
 
 
-    int A[2] = {1,2};
-    int B[2][3] = {{2,4,6},{5,7,8}};
 
-    Func1(A); // -> will return int* (a pointer to integer)
 
-    Func2(B); // -> will return int (*)[3] (a pointer to an array of 3 integers)
+    Func1(A); 
 
-    Func3(C); // -> will return int (*)[2][2] (a pointer to a 2d array of 2 rows and 2 columns
-              //    of integers)
+    Func2(B); 
+
+    Func3(C); 
 
 
     printf("%d\n", C);
